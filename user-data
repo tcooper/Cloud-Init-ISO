@@ -1,12 +1,11 @@
 #cloud-config
 system_info:
   default_user:
-    name: test
-
-chpasswd:
-  list: |
-    test:weakpassword
-  expire: False
+    name: rocky
+    groups: [ sudo ]
+    shell: /bin/bash
+    lock_passwd: false
+    hashed_passwd: $6$bbN/b/rvMV3Tqo.3$113GdbRrLc8PITfcfx3Kpc2bawvR9VyAvAWoLqkWYg7ZzyM37xZnYpA3VO6TSBLAMQVgPCdSuCsDM.W5Ztn/I1
 
 chpasswd:
   list: |
